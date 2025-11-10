@@ -1,0 +1,60 @@
+.item1 { grid-area: header; }
+.item2 { grid-area: option1; }
+.item3 { grid-area: option2; }
+.item4 { grid-area: option3; }
+.item5 { grid-area: menu; }
+.item6 { grid-area: main; }
+.item7 { grid-area: clear; }
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'option1 option1 option2 option2 option3 option3'
+    'menu main main main main clear';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+input{
+  
+  background-color:rgb(204, 215, 224);
+  font-size: 25px;
+  font-weight: bold;
+  background-color: black;
+  color: whitesmoke;
+  border: 5px outset red ;
+  border-radius: 60%
+ 
+}
+
+button{
+  
+  background-color:rgb(204, 215, 224);
+  font-size: 25px;
+  font-weight: bold;
+  background-color:black;
+  color: white;
+  border: 5px outset red ;
+  border-radius: 50%
+  
+}
+
+select{
+  font-size: 30px; 
+}
+
+textarea{
+  font-size: 20px;
+  font-weight: bold;
+}
+
