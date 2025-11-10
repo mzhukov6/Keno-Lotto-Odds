@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+
+<script type="text/javascript">
+    function eraseText() {
+    document.getElementById("output").value = "";
+  }
+
+
+  function changeFunc() {
+    var selectBox = document.getElementById("selectBox");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    alert(selectedValue);
+    outputText.value= "MATCH" + "\t" +"ODDS To ONE" +"\n";////YESSSSSS
+     ///////
+    
+    var kenoOdds=0;
+    var N =80;
+    var D =20;
+    var spot =Number(selectedValue);
+    
+    for( var i = 0;i<spot+1;i++){
+     kenoOdds=combo(spot,i)*combo(N-spot,D-i)/combo(N,D);
+     
+     outputText.value = outputText.value + i.toString() +"\t" + (1/kenoOdds).toFixed(4).toString() + "\n";
+     //outputText.value = outputText.value + i.toString();
+    }
+    
+   // outputText.value = outputText.value+ i.toString()+"\n";
+   // outputText.value = outputText.value + i.toString()+"\n";
+}
+
+function combo(n,r){
+    var result =1;
+    var upper = n;
+    
+    for(let i=1;i<(n-r+1);i++){
+        result = result*upper/i;
+        //console.log(upper,i);
+        upper --;
+    }
+    return result;
+}
+//console.log(combo(16,3));
+</script>
+
+</head>
+
+<body>
+<h1>Grid Layout</h1>
+
+<p>This grid layout contains six columns and three rows:</p>
+
+<div class="grid-container">
+  <div class="item1">
+    <h2>Keno Odds</h2>
+    <h4>Select Spot</h4>
+    <select id="selectBox" onchange="changeFunc()">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+      <option value="20">20</option>
+      
+     </select>
+  </div>
+  <div class="item2">Menu</div>
+  <div class="item3">
+    
+    <textarea readonly id="outputText" rows="4"cols ="50">
+     
+      </textarea>
+  </div>  
+  <div class="item4">
+    <input type="button" value="Clear" onclick="javascript:eraseText();"> 
+  </div>
+  <div class="item5">Footer</div>
+</div>
+
+</body>
+</html>
