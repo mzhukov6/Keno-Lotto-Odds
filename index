@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lotto Odds</title>
+    <link rel ="stylesheet" href ="styles.css">
+</head>
+<body>
+        <div class="grid-container">
+
+                <div class="item1">
+                  <h1>Keno Odds</h1>
+                  <input type="button" value ="Get Results" onclick="javascript:getResults();"></input>
+                  
+                </div>
+                
+                <div class="item2">
+                  <h5>Select Number of Marbles</h5>
+                  <select  id="selectBox1"  >
+                      <option value="80">80</option>
+                      <option value="79">79</option>
+                      <option value="78">78</option>
+                      <option value="77">77</option>
+                      <option value="76">76</option>
+                      <option value="75">75</option>
+                      <option value="70">70</option>
+                      <option value="65">65</option>
+                      <option value="60">60</option>
+                      
+                     </select>
+                </div>
+
+                <div class="item3">
+                  <h5>Select Number Drawn</h5>
+                  <select  id="selectBox2"  >
+                      <option value="20">20</option>
+                      <option value="19">19</option>
+                      <option value="18">18</option>
+                      <option value="17">17</option>
+                      <option value="16">16</option>
+                      <option value="15">15</option>
+                      <option value="14">14</option>
+                      <option value="13">13</option>
+                      <option value="12">12</option>
+                      <option value="11">11</option>
+                      <option value="10">10</option>
+                      
+                  </select>
+                </div>  
+
+                <div class="item4">
+                  <h5>Select Spot To Be Played</h5>
+                  <select  id="selectBox3" >
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="20">20</option>
+                      
+                  </select> 
+                </div>
+
+                <div class="item5">
+                  <h5>Menu</h5>
+                  <a href="index2.html">Lotto Odds</a>
+                </div>
+
+                <div class = "item6">
+
+                   
+                  <textarea readonly id="outputText" rows="22"cols ="75" ></textarea>
+                </div>
+
+                <div class="item7">
+                    <button type="button"  onclick="javascript:eraseText();">Clear All</button>
+                    
+                    
+                </div>
+                
+                </div>
+              
+              <script src="index.js"></script>  
+    
+</body>
+</html>
